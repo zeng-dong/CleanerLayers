@@ -5,7 +5,9 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{8E611180-0A32-4F10-8A27-C14DBED2F596}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PackIT.Domain", "src\PackIT.Domain\PackIT.Domain.csproj", "{145D9406-A7AD-4222-B69B-DFE55C95B60E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PackIT.Domain", "src\PackIT.Domain\PackIT.Domain.csproj", "{145D9406-A7AD-4222-B69B-DFE55C95B60E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PackIT.Shared", "src\PackIT.Shared\PackIT.Shared.csproj", "{AF3EBDB8-0181-4D12-9079-0C682F9C17C9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,6 +19,10 @@ Global
 		{145D9406-A7AD-4222-B69B-DFE55C95B60E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{145D9406-A7AD-4222-B69B-DFE55C95B60E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{145D9406-A7AD-4222-B69B-DFE55C95B60E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF3EBDB8-0181-4D12-9079-0C682F9C17C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF3EBDB8-0181-4D12-9079-0C682F9C17C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF3EBDB8-0181-4D12-9079-0C682F9C17C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF3EBDB8-0181-4D12-9079-0C682F9C17C9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

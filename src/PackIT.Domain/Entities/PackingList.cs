@@ -1,4 +1,5 @@
-﻿using PackIT.Domain.ValueObjects;
+﻿using PackIT.Domain.Exceptions;
+using PackIT.Domain.ValueObjects;
 using System;
 
 namespace PackIT.Domain.Entities
@@ -10,10 +11,26 @@ namespace PackIT.Domain.Entities
         private PackingListName _name;
         private Localization _localization;
 
-        internal PackingList(Guid id, PackingListName name, Localization localization ) {
+        private readonly LinkedList<PackingItem> _items = new();
+
+        internal PackingList(Guid id, PackingListName name, Localization localization, LinkedList<PackingItem> items ) {
             Id = id;
             _name = name;
             _localization = localization;
+
         }
+
+        public void AddItem(PackingItem item)
+        {
+            var alreadyExists = _items.Any(i => i.Name == item.Name);
+
+            if (alreadyExists)
+            {
+                throw new PackingItemAlreadyExistsException(_name, item.Name);
+            }
+
+            _items.AddLast(item);
+            //AddEvent(new PackingItemAdded(this, item));
+        }        
     }
 }

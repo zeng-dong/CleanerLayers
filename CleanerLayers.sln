@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PackIT.Domain", "src\PackIT
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PackIT.Shared", "src\PackIT.Shared\PackIT.Shared.csproj", "{AF3EBDB8-0181-4D12-9079-0C682F9C17C9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PackIT.Shared.Abstraction", "src\PackIT.Shared.Abstraction\PackIT.Shared.Abstraction.csproj", "{85781427-E123-4B9A-ADF0-C590E5ACC7B1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PackIT.Shared.Abstractions", "src\PackIT.Shared.Abstraction\PackIT.Shared.Abstractions.csproj", "{85781427-E123-4B9A-ADF0-C590E5ACC7B1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

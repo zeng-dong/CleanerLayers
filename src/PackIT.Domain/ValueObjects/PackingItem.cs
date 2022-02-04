@@ -6,7 +6,7 @@ namespace PackIT.Domain.ValueObjects
     {
         public string Name { get; }
         public uint Quantity { get; }
-        public bool IsPacked { get; }
+        public bool IsPacked { get; init; }
 
         public PackingItem(string name, uint quantity, bool isPacked)
         {
@@ -19,6 +19,5 @@ namespace PackIT.Domain.ValueObjects
             Quantity = quantity;
             IsPacked = isPacked;
         }
-
     }
 }

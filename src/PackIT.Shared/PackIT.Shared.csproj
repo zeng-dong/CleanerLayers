@@ -15,4 +15,8 @@
     <ProjectReference Include="..\PackIT.Shared.Abstraction\PackIT.Shared.Abstractions.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Domain\" />
+  </ItemGroup>
+
 </Project>

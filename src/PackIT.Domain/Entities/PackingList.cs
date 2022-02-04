@@ -1,23 +1,24 @@
-﻿using PackIT.Domain.Exceptions;
+﻿using PackIT.Domain.Events;
+using PackIT.Domain.Exceptions;
 using PackIT.Domain.ValueObjects;
-using System;
+using PackIT.Shared.Abstractions.Domain;
 
 namespace PackIT.Domain.Entities
 {
-    public class PackingList
+    public class PackingList : AggregateRoot<PackingListId>
     {
-        public Guid Id { get; private set; }
-        
-        private PackingListName _name;
-        private Localization _localization;
+        public PackingListId Id { get; private set; }
+
+        private readonly PackingListName _name;
+        private readonly Localization _localization;
 
         private readonly LinkedList<PackingItem> _items = new();
 
-        internal PackingList(Guid id, PackingListName name, Localization localization, LinkedList<PackingItem> items ) {
+        internal PackingList(Guid id, PackingListName name, Localization localization, LinkedList<PackingItem> items)
+        {
             Id = id;
             _name = name;
             _localization = localization;
-
         }
 
         public void AddItem(PackingItem item)
@@ -30,7 +31,7 @@ namespace PackIT.Domain.Entities
             }
 
             _items.AddLast(item);
-            //AddEvent(new PackingItemAdded(this, item));
-        }        
+            AddEvent(new PackingItemAdded(this, item));
+        }
     }
 }

@@ -2,5 +2,5 @@
 
 namespace PackIT.Domain.Policies;
 
-public record PolicyData(TravelDays Days, Consts.Gender Gender, ValueObjects.Temperature Temperature,
+public record PolicyData(TravelDays Days, Consts.Gender Gender, Temperature Temperature,
         Localization Localization);
